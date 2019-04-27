@@ -97,9 +97,9 @@ display:flex;}
 .section {background-color: rgb(201, 245, 166);
     width:100%;
     display:inline-block;}
-    .title{padding:10px 20px;}
+    .title{padding:5px 20px;}
     aside{display: block;
-        margin: 0px 170px 0 30px ; 
+        margin: -20px 170px 0 30px ; 
         line-height: 30px;
     }
 
@@ -119,11 +119,11 @@ padding:20px 10px;
 border-radius: 5%;}
 /*----------------Education---------------------*/
 .Education{
-    width:500px;
+    width:800px;
     height:300px;
     box-shadow: 0 0 15px 1px rgba(56, 240, 71, 0.075);
     background: #f7f3bd;
-    background-image: url(../Online-CV/img/education.jpg);
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmb9MQOsmN4kvt-7e6xIVdagKeEP5zzkWCWIP61ysY5EYiYlHJ8w);
     background-position:right bottom;
     background-repeat: no-repeat;
     background-size:30%;
