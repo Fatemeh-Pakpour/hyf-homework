@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <link rel="stylesheet" href="./assets/main.css">
+       <title>Sign up form design</title>
+       <link rel="icon" type="image/ico" href="" />
+
+</head>
+
+<body>
+       <!-- Header -->
+       <header>
+              <div class="wrapper-nav">
+                     <!--logo-->
+                     <div class="left">
+                            <img class="logo" src="image/3.jpg" alt="shopping olnline logo">
+                     </div>
+                     <!-- navigator menu -->
+                     <nav class="right">
+                            <ul>
+                                   <li><a href="#">home</a></li>
+                                   <li><a href="#">about</a></li>
+                                   <li><a href="#">services</a></li>
+                                   <li><a href="#">office</a></li>
+                            </ul>
+                     </nav> <!-- navigator menue end -->
+              </div>
+       </header>
+       <!--end header-->
+       <!--content-->
+       <div class="text">
+              <h1>Sign up to your customtailor.com</h1>
+              <p>We can't wait to help you improve your life-style and gain the attention from people around you!</p>
+              <p>Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy picking the
+                     best offers
+                     that match your prefrences and style. Every week we will send you a hand-picked selection- we just
+                     need
+                     to know a few details about you first...</p>
+       </div>
+       <main>
+              <article>
+                     <h3 class="percent-count">Step 1/4- Tell us who you are?</h3>
+                     <fieldset>
+                            <div class="progress-bar">
+                                   <div class="progress"></div>
+                                   <p>Nice to meet you, lets spend a minute to get to know each other? please enter the
+                                          following.</p>
+                            </div>
+                     </fieldset>
+              </article>
+
+              <div class="form">
+                     <form action="index2.html" method="get">
+                            <fieldset>
+                                   <label>First name<span class="required">*</span></label>
+                                   <div class="input-group">
+                                          <input type="text" name="first-name" required autofocus>
+                                   </div>
+                                   <label>Last name <span class="required">*</span></label>
+                                   <div class="input-group">
+                                          <input type="text" name="last-name" required autofocus>
+                                   </div>
+
+                            </fieldset>
+                            <fieldset>
+                                   <label for="country">Country<span class="requirde">*</span></label>
+                                   <div class="input-group">
+                                          <select id="country" name="country" class="form-control" id="contry-list"
+                                                 required autofocus>
+                                                 <option value="Faroe Islands">Faroe Islands</option>
+                                                 <option value="Fiji">Fiji</option>
+                                                 <option value="Finland">Finland</option>
+                                                 <option value="France">France</option>
+                                                 <option value="French Guiana">French Guiana</option>
+                                                 <option value="French Polynesia">French Polynesia</option>
+                                                 <option value="Fiji">Fiji</option>
+                                                 <option value="Finland">Finland</option>
+                                                 <option value="France">France</option>
+                                                 <option value="French Guiana">French Guiana</option>
+                                          </select>
+                                   </div>
+                            </fieldset>
+                            <fieldset>
+                                   <label for="street-address">Street adress <span class="required">*</span></label>
+                                   <div class="input-group">
+                                          <input type="text" name="street-address" required autofocus>
+                                   </div>
+                                   <label for="post-code">Post Code<span class="required">*</span></label>
+                                   <div class="input-group">
+                                          <input type="text" name="post-code" required autofocus>
+                                   </div>
+
+
+                            </fieldset>
+                            <div id="profile">
+                                   <label for="post-code">Profile discibtion</label>
+
+                                   <input type="text" name="profil">
+
+                                   <div class="profilenote">
+                                          <p>Please provide a short</p>
+                                          <p> discribtion of yourself to be </p>
+                                          <p>displayed on our social </p>
+                                          <p>media commiunity page</p>
+                                   </div>
+
+                                   <!--shipping address-->
+                                   <div class="shipping">
+                                          <label class="container">Shipping address
+                                                 <input type="checkbox" checked="checked">
+                                                 <span class="checkmark"></span>
+                                          </label>
+                                   </div>
+
+                                   <div class="button">
+                                          <button type="button" class="btn cancel">Cancel</button>
+                                          <button type="submit" class="btn signup">Next Step</button></div>
+                            </div>
+                     </form>
+              </div>
+       </main>
+</body>
+
+</html>
