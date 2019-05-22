@@ -33,6 +33,9 @@ console.log (housePrice) ;
 if (housePrice < 2500000) {
     console.log ( "Peter and Julia are paying too much")
 }
+else {
+    console.log ( "The price is reasonable")
+}
 
 // Ez Namey (Startup name generator)
 const firstName = ["awesome", "easy", "lovely", "dragon", "serpent", "vegi" ,"cheesy", "coco", "toy", "monster"];
