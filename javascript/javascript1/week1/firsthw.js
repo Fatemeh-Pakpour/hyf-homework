@@ -4,9 +4,9 @@
 
 const yearOfBirth = 1985 ;
 const yearFuture = 2025 ;
-const futureYear =  yearFuture - yearOfBirth ;
-console.log (futureYear);
-console.log ("I will be " + futureYear + " years old in " + yearFuture) ;
+const futureAge =  yearFuture - yearOfBirth ;
+console.log (futureAge);
+console.log ("I will be " + futureAge + " years old in " + yearFuture) ;
 
 
 // Goodboy-Oldboy (A dog age calculator)
@@ -38,9 +38,9 @@ if (housePrice < 2500000) {
 const firstName = ["awesome", "easy", "lovely", "dragon", "serpent", "vegi" ,"cheesy", "coco", "toy", "monster"];
 const secondName = ["clothes", "fifi", "general","basic", "production", "home", "fact", "real", "visual", "world"] ;
 
-const randomNumberFirst = Math.floor ( Math.random() * 10 ) + 0 ;
+const randomNumberFirst = Math.floor ( Math.random() * 10 ) ;
 console.log (firstName [randomNumberFirst]);
-const randomNumberSecond = Math.floor(Math.random() * 10) + 0 ;
+const randomNumberSecond = Math.floor(Math.random() * 10) ;
 console.log (secondName[randomNumberSecond]);
 const startupName = firstName[randomNumberFirst] + " " + secondName[randomNumberSecond];
 console.log ("The startup:" + startupName  + " contains " + startupName.length + " characters") ;
