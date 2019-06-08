@@ -25,14 +25,14 @@ function getNoteFromId(id){
 }
 // Log out notes
 function logOutNotesFormatted() {
-    for(let i in notes){
+    for(let i = 0; i < notes.length; i++){
         console.log(`The note with id ${notes[i].id} has the following note text:${notes[i].content}` )
     }   
 }
 // Finding index of object in the array
 
 function functiontofindIndexByKeyValue(id) { 
-   for (var i = 0; i < notes.length; i++) {
+   for (let i = 0; i < notes.length; i++) {
       if (notes[i].id === id) {
         return i;
       }
