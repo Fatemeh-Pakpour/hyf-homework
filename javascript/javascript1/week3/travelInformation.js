@@ -21,6 +21,6 @@ const travelInformation = {
   
   // Execute the code
   console.log( travelTime ()); 
-  console.log( hour + " hours " + "and " + minute + " minutes ");
+  console.log( hour + " hours and " + minute + " minutes ");
 
 
