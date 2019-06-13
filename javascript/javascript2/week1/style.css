@@ -1,0 +1,51 @@
+body {
+    background-color:rgb(211, 247, 10)
+}
+.myBtn {
+    background-color :#6bf1f1;
+    border-radius: 13px;
+    padding: 10px 14px ;
+    font-size: 20px ;
+    font-weight: bold;
+    margin-top: 15px;
+    
+}
+.container {
+    background: rgb(200, 109, 253);
+    padding: 60px 20px ;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px ;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center ;
+    align-items: flex-start ;
+    width: 600px;
+    margin: 20px 300px ;
+}
+.container h1 {
+color: rgb(23, 6, 44)  ;
+text-align: center ;
+}
+.container input {
+  flex-basis: 30px ;  
+  margin-bottom: 10px;
+ 
+}
+.container label {
+    font-size: 20px ;
+   
+}
+.container select{
+    padding : 5px 7px; 
+    margin-bottom: 10px; 
+    flex-basis: 30px ;
+}
+h2{
+    margin: 70px 520px;
+    color :rgb(12, 12, 78) ;   
+}
+.image{
+margin: 5px 420px;
+width: 30%;
+height: auto;
+} 
