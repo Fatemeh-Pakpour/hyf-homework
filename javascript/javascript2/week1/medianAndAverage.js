@@ -1,8 +1,4 @@
-/*
-*** Homework Fourth Week / Hack Your Future, Javascript2, 
-*   Author: Fatemeh Pakpour
-*   Difference between median and average
-*/
+
 // a number of array's items are odd
 const housePrices = [3000000, 3500000, 1300000, 40000000, 100000000, 8000000, 2100000];
 
