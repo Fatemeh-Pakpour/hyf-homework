@@ -103,8 +103,5 @@ function switchClick(){
  message() ; 
 }          
 function switchHover(){
-  myBtn.removeEventListener("click",switchHover);    
-  inputName.addEventListener("mouseover", () =>{
-    message()});
-
+    message();
 }
