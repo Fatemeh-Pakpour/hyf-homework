@@ -98,7 +98,7 @@ select.addEventListener("change", ()=>{
       myBtn.removeEventListener("click", switchClick);
       inputName.removeEventListener('mouseout',  switchHover);
 }
-})
+});
 function switchClick(){
 inputName.removeEventListener("mouseout", switchHover);
   myBtn.addEventListener("click", () =>{
