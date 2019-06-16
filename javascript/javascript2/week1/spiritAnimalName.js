@@ -63,10 +63,7 @@ const myBtn = document.querySelector ("button.myBtn") ;
 const select = document.querySelector ("select") ;
 const img = document.querySelector('img');
 const h2 = document.querySelector("h2");
-  
-
-  
-
+ 
 // Creating random number
 function getRandomNumber() {
     return Math.floor(Math.random()*10) ;
@@ -85,35 +82,26 @@ function message(){
     else{
     const rand = getRandomObj();
     h2.innerHTML= `Name : ${inputName.value} : ${inputName.value} - ${rand.name}`
-    img.src =rand.image ;
-   
+    img.src =rand.image ; 
   }
 }
 
 // creating functionality for hover    
-
-    inputName.addEventListener("mouseout", () =>{
-       message() ;
-     
-        
+inputName.addEventListener("mouseout", () =>{
+   message() ;      
     }) ;   
 select.addEventListener("change", ()=>{
-if (select.options.selectedIndex === 1){
-  inputName.removeEventListener('mouseout',  switchHover);
-  myBtn.addEventListener("click" , switchClick);
-  }
-else {
-  myBtn.removeEventListener("click",switchHover);
-  inputName.removeEventListener('mouseout',  switchHover);
+    if (select.options.selectedIndex === 1){
+      inputName.removeEventListener('mouseout',  switchHover);
+      myBtn.addEventListener("click" , switchClick);
+    } else {
+      myBtn.removeEventListener("click", switchHover);
+      inputName.removeEventListener('mouseout',  switchHover);
 }
 })
-
 function switchClick(){
- message() ;
- 
-  
+ message() ; 
 }          
-
 function switchHover(){
   myBtn.removeEventListener("click",switchHover);    
   inputName.addEventListener("mouseover", () =>{
