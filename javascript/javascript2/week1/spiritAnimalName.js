@@ -1,8 +1,4 @@
-/*
-*** Homework Fourth Week / Hack Your Future, Javascript2, 
-*   Author: Fatemeh Pakpour
-*   Spirit animal name generator
-*/
+
 // variables
 // const nameDatabase = ["The crying butterfly" , "Wisdom like fox" , "Patient like camel " , "Beloved like swan" , "Scary rat" ,"Pinky pig" ,"Strong lion" , "beautiful peacock" , "Lazy panda " ,"Fast rabbit" ] ;
 const nameDatabase = [
