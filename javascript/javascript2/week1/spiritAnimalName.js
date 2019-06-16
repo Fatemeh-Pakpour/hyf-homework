@@ -87,9 +87,7 @@ function message(){
 }
 
 // creating functionality for hover    
-inputName.addEventListener("mouseout", () =>{
-   message() ;      
-    }) ;   
+ inputName.addEventListener("mouseout", switchHover);   
 select.addEventListener("change", ()=>{
     if (select.options.selectedIndex === 1){
       inputName.removeEventListener('mouseout',  switchHover);
