@@ -70,7 +70,7 @@ section.products>ul>li>ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 12px 12px 12px;
+    padding: 20px 43px 40px 30px;
 }
 
 section.products>ul>li>ul>li:first-child {
@@ -79,7 +79,7 @@ section.products>ul>li>ul>li:first-child {
 
 section.products>ul>li:nth-child(odd) {
     background-color: #f0f0f0;
-}
+} 
 
 section.products li div, section.products li button {
     margin-right: 12px;
@@ -92,12 +92,12 @@ section.products li .name {
 }
 
 section.cart {
-    /* position: fixed; */
+    position: fixed; 
     bottom: 12px;
     right: 12px;
-    width: 300px;
+    width: 400px;
     height: 200px;
-    background-color: white;
+    background-color:rgb(137, 214, 219);
     overflow-y: auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     padding: 12px;
@@ -108,14 +108,28 @@ section.cart ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    position: relative ;
+  
 }
 
 section.cart ul>li {
     display: flex;
     justify-content: space-between;
-    padding: 6px;
+     padding: 10px; 
 }
 
 section.cart ul>li:nth-child(odd) {
-    background-color: #f0f0f0;
+    background-color: #caf0fa;
+}
+button {
+    color: aqua ;
+    background-color: rgb(15, 107, 211);
+    border-radius: 13px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    position:absolute;
+    margin-top: -30px;
+    margin-left: 53.5%;
+    padding:2px 3px;
+
 }
