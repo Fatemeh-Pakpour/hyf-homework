@@ -1,0 +1,92 @@
+body{
+    background-color: aquamarine;
+}
+
+h1{
+    font-family: cursive;
+    margin: 20px 150px;
+} 
+select {
+    padding:10px 10px;
+    border : solid 1px blue;
+    color:blue;
+    border-radius: 13px;
+    margin: 5px 200px;
+}
+select > :first-child {
+   color: gray;
+}
+.container{
+    border-radius: 13px;
+    margin : 30px 300px;
+    height: 700px;
+}  
+option[value=""][disabled] {
+    display: none;
+  }
+   option {
+    color: blueviolet;
+  } 
+  button {
+      background-color: rgb(7, 247, 7);
+      color: rgb(3, 3, 82);
+      border: solid 1px rgb(34, 180, 34);;
+      padding :10px 12px;
+      border-radius: 10px;
+      margin:30px 210px;
+  }
+.content{
+    display: flex;
+     width:400px;
+    margin:20px 80px;
+    position:relative ;
+}
+ .right {
+    border-style:solid;
+    border-bottom: 10px;
+    width:50%;
+    background-color: rgb(250, 250, 240);
+    border-left:5px;
+    border-right:none;
+    text-align: center;
+    padding: 60px 30px;
+    font-size: 20px;
+    
+}
+.content .left {
+    border-style:solid;
+    border-bottom: 10px;
+    width:50%;
+    background-color: rgb(250, 250, 240);
+    border-left:none;
+    text-align: center;
+    padding: 60px 30px;
+    font-size: 20px;
+}
+.gameLog {
+    background-color: rgb(193, 141, 241);
+    border: solid 2px plum;
+    width: 350px;
+    margin: 30px 100px;
+    text-align: center;
+    color:cornsilk;
+}
+ #canvasLeft {
+    width: 200px;
+    position: absolute;
+    display: none;
+    height: 191px;
+} 
+#canvasLeft {
+    width: 200px;
+    position: absolute;
+    /* display: none; */
+    height: 191px;
+} 
+#canvasRight {
+    width: 200px;
+    position: absolute;
+     display: none; 
+     height: 191px; 
+   
+} 

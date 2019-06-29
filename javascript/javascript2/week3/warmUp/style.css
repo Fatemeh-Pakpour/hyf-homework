@@ -1,0 +1,10 @@
+body{
+    height:10000px;
+   
+}
+div.joke{
+background-color: rgb(211, 211, 236);
+width: 500px;
+border-radius: 13px;
+height: 200px;
+}
