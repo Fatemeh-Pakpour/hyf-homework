@@ -1,0 +1,68 @@
+body {
+  background-color: rgb(208, 250, 250);
+}
+#content {
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 40px 70px;
+  color: rgb(43, 43, 70);
+}
+
+#search_giphy {
+  padding: 10px 30px;
+  font-size: 15px;
+  -webkit-box-shadow: 3px 3px 4px 5px rgb(222, 243, 205); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 3px 3px 4px 5px rgb(222, 243, 205); /* Firefox 3.5 - 3.6 */
+  box-shadow: 3px 3px 4px 5px rgb(222, 243, 205); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  margin: 30px 110px;
+}
+#search_button {
+  padding: 0.8rem 2.18rem;
+  border-radius: 13px;
+  border: 3px solid rgb(112, 247, 112);
+  background-color: rgb(112, 247, 112);
+  color: rgb(48, 38, 58);
+  /* background: url(bglines.png); */
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0.625rem 8.125rem;
+}
+#input_number_of_giphy {
+  padding: 10px 30px;
+  font-size: 15px;
+  margin: 20px 110px 30px 110px;
+}
+#image_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 250px;
+  border: 3px solid #008080;
+}
+
+/* target viewport sizes less than 576px */
+@media (max-width: 576px) {
+  #search_button {
+    margin-left: 160px;
+  }
+  #title {
+    font-size: 20px;
+    margin-right: 1.5rem;
+  }
+
+  #image_div {
+    margin-left: 7rem;
+  }
+}
