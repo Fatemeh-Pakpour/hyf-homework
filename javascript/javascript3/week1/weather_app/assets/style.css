@@ -1,0 +1,108 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(176, 237, 241);
+   
+  }
+#title{
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding:15px 80px;
+  background-color:rgb(239, 252, 65);
+  color:rgb(7, 22, 156);
+}  
+#header_image{
+  width:100%;
+}
+ 
+#content{
+    margin: 10px 40px;
+    padding: 10px 50px; 
+    display:flex;
+    flex-wrap: wrap;
+}
+#city_name{
+  border:solid 1px rgb(53, 228, 53);
+  padding : 10px 20px;
+}
+#location {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding-bottom:5px;
+}
+#btn_search{
+    margin:10px 50px;
+    padding:10px 15px;
+}
+.buttons{
+    border-radius: 25px;
+    background-color: rgb(53, 228, 53);
+    font-size: 15px;
+}
+#btn_current_location{
+  padding: 5px 15px; 
+}
+#temp{
+  font-size: 20px; 
+  font-weight: bold;
+  padding-top:14px;
+}
+#wicon{
+  width:90px;
+  margin-left:-20px;
+}
+#my_div{
+margin-left: 100px; 
+}
+
+.table{
+  display:flex;
+  flex-direction: row;  
+  margin : 0 70px;
+}
+.table_title {
+    display: none;
+    list-style-type:none;
+    padding: 10px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+.table_data {
+  list-style:none;
+  padding: 5px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  
+}
+  .table_data li {
+    list-style-type: none;
+}
+.table li{
+  padding:5px 5px;
+}
+#map {
+  height:400px;
+    width :100%;
+}
+/* target viewport sizes less than 576px */
+@media (max-width: 576px) {
+#title{
+  font-size: 15px;
+}
+#btn_current_location{
+ padding: 5px 15px; 
+ margin-left:38px;
+}
+.table{
+  width:300px;
+}
+.table_title{
+  font-size:14px;
+} 
+ .table_data{
+  font-size: 14px;
+  padding: 5px 10px;
+}
+}
