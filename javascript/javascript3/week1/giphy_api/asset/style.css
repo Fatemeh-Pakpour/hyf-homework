@@ -36,10 +36,16 @@ body {
   margin: 0.625rem 8.125rem;
 }
 #input_number_of_giphy {
-  padding: 10px 30px;
+  padding: 10px 90px;
   font-size: 15px;
   margin: 20px 110px 30px 110px;
 }
+input::placeholder { 
+  color: pink; 
+  text-align: center;
+  padding-right:30px; 
+}
+
 #image_div {
   display: flex;
   flex-direction: column;
