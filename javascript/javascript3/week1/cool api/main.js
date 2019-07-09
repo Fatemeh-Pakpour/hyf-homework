@@ -1,29 +1,28 @@
-fetch("https://jsonplaceholder.typicode.com/users")
-  .then(response => response.json())
-  .then(json =>
-    json.forEach(element => {
-      console.log(element.name);
-    })
-  );
-function loadAnswer(){
-    fetch("https://yesno.wtf/api")
-    .then(response => response.json())
-    .then(json => {console.log(json)
-        const img = document.querySelector("#image");
-        const display = document.querySelector("h1");
-         display.textContent = json.answer.toUpperCase();
-        img.src = json["image"];
-    });
-}
-loadAnswer();
-document.getElementById("btnReload").addEventListener("click", loadAnswer);
+const imageDiv = document.querySelector("#image_div");
 
-window.addEventListener("load", event => {
-  
-  if(localStorage.getItem("city") !== null){
-    const data = JSON.parse(localStorage.getItem("city"));
-    display(data);
-  }
-
+function photo(){
+const apiKey = "26d8d016290f13f48088af169ba901361c1bc0cc462eeacf88793d9d7b6ad510";
+fetch("https://api.unsplash.com/photos/?client_id="+ apiKey)
+.then(response =>response.json())
+.then(json => {
+  console.log(json);
+  displayPhoto(json);
 });
+}
+
+/**
+ * display images of json file
+ *
+ * @param {*} data =>data of json file
+ */
+function displayPhoto(data){
+  const urlArray = data.map(element => element.urls.regular);
+  urlArray.forEach(item => {
+    const image = document.createElement("img");
+    image.setAttribute("src",item);
+    imageDiv.appendChild(image);  
+  });
+}
+document.getElementById("btnReload").addEventListener("click", photo);
+
 

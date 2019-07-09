@@ -15,7 +15,7 @@ body{
 #content{
     margin: 2.5rem 20rem;   
 }
-#image {
+img{
     width: 80%;
     border: solid 1px black;
     margin-top: 3rem;
