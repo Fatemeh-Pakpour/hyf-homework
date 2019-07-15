@@ -3,7 +3,7 @@ const austranusList = document.querySelector("#austranus_list");
 const btnSearch = document.querySelector("#btn_search");
 
 btnSearch.addEventListener("click", () => {
-  fetch("http://api.open-notify.org/astros.json")
+  fetch("https://api.open-notify.org/astros.json")
     .then(response => response.json())
     .then(getProfiel)
     .then(displaySearchInfo)
