@@ -1,6 +1,4 @@
-body{
-    background-color: blueviolet;
-}
+
 button{
     padding: 1em ;
     background-color: rgb(13, 13, 71);
@@ -9,10 +7,14 @@ button{
     font-size: 18px;
     border-radius: 13px;
 }
-#message{
-    font-size: 20px;
-    font-weight: bold;
-}
-div{
-   margin : 40px 300px;   
-} 
+
+#map {
+    height: 100%;
+  }
+  /* Optional: Makes the sample page fill the window. */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+  }
