@@ -1,18 +1,16 @@
 const canvas = document.querySelector("#my_canvas");
 
-/* function resizeCanvas() {
-    myconvas.style.width = window.innerWidth + "px";
-    setTimeout(function() {
-      myconvas.style.height = window.innerHeight + "px";
-    }, 0);
-  };
-  resizeCanvas();
- */
-canvas.width = window.innerWidth - 20;
-canvas.height = window.innerHeight - 20;
-canvas.style.width = canvas.width + "px";
-canvas.style.height = canvas.height + "px";
 class Circle {
+  /**
+   *Creates an instance of Circle.
+   * @param {*} x
+   * @param {*} y
+   * @param {*} r
+   * @param {*} startAngle
+   * @param {*} endAngle
+   * @param {*} fillColor
+   * @memberof Circle
+   */
   constructor(x, y, r, startAngle, endAngle, fillColor) {
     this.x = x;
     this.y = y;
@@ -21,6 +19,11 @@ class Circle {
     this.endAngle = endAngle;
     this.fillColor = fillColor;
   }
+  /**
+   *draw circle
+   *
+   * @memberof Circle
+   */
   draw() {
     const context = canvas.getContext("2d");
     context.beginPath();
@@ -31,6 +34,11 @@ class Circle {
     context.closePath();
   }
 }
+/**
+ *creat random color
+ *
+ * @returns
+ */
 function getRandomColor() {
   function color() {
     // The radix number shows as an hexadecimal value
@@ -39,66 +47,46 @@ function getRandomColor() {
   }
   return "#" + color() + color() + color();
 }
-let mouseX = 0;
-let mouseY = 0;
 
-function update() {
-  const circle4 = new Circle(100, 100, 50, 0, 2 * Math.PI, "#FF6A6A");
-  circle4.draw();
-  requestAnimationFrame(update);
-}
-update();
-
-const canvasPos = getPosition(canvas);
-
-function setMousePosition(event) {
-  mouseX = event.clientX - canvasPos.x;
-  mouseY = event.clientY - canvasPos.y;
+/**
+ * creat randon number between two numbers
+ *
+ * @param {*} min
+ * @param {*} max
+ * @returns
+ */
+function getRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-canvas.addEventListener("mousemove", setMousePosition, false);
+/**
+ *
+ *
+ * @param {*} x => x coordination
+ * @param {*} y => y coordination
+ * @returns
+ */
+function randomCircle(x, y) {
+  const r = getRandomNumber(5, 100) + 1;
+  const color = getRandomColor();
 
-function getPosition(element) {
-  let xPosition = 0;
-  let yPosition = 0;
-
-  while (element) {
-    xPosition += element.offsetLeft - element.scrollLeft + element.clientLeft;
-    yPosition += element.offsetTop - element.scrollTop + element.clientTop;
-    element = element.offsetParent;
-    console.log(xPosition);
-  }
-  return {
-    x: xPosition,
-    y: yPosition
-  };
+  return new Circle(x, y, r, 0, 2 * Math.PI, color);
 }
-
-const circle1 = new Circle(
-  Math.floor(Math.random() * 200 + 200),
-  Math.floor(Math.random() * 200 + 200),
-  Math.floor(Math.random() * 100 + 20),
-  0,
-  2 * Math.PI,
-  getRandomColor()
-);
-const circle2 = new Circle(
-  Math.floor(Math.random() * 300 + 160),
-  Math.floor(Math.random() * 300 + 160),
-  Math.floor(Math.random() * 100 + 50),
-  0,
-  2 * Math.PI,
-  getRandomColor()
-);
-const circle3 = new Circle(
-  Math.floor(Math.random() * 300 + 300),
-  Math.floor(Math.random() * 300 + 300),
-  60,
-  1 * Math.PI,
-  2 * Math.PI,
-  getRandomColor()
-);
-
-circle1.draw();
-circle2.draw();
-circle3.draw();
+/**
+ * display the random circles on the canvas
+ *
+ */
+function renderCircles() {
+  //full screen canvas
+  canvas.width = window.innerWidth - 20;
+  canvas.height = window.innerHeight - 20;
+  canvas.style.width = canvas.width + "px";
+  canvas.style.height = canvas.height + "px";
+  canvas.addEventListener("mousemove", event => {
+    console.log(event.clientX, event.clientY);
+    randomCircle(event.clientX, event.clientY).draw();
+  });
+}
+renderCircles();
