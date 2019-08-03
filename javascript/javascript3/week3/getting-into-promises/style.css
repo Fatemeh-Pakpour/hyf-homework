@@ -1,0 +1,20 @@
+body {
+    background-color: aquamarine;
+}
+#ul_repository {
+    border: 1px solid rebeccapurple;
+    background-color: rgb(208, 190, 224);
+    border-radius: 15px;
+}
+
+#ul_repository li{
+    list-style: none;
+    padding : 6px 20px;
+}
+#show {
+    padding: 1em;
+    border-radius: 15px;
+    background-color: rgb(88, 88, 143);
+    font-size: 16px;
+    color: wheat;
+}
