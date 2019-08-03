@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping cart</title>
+</head>
+<body>
+        <div id = "urername"></div>
+        <h1>Shopping Basket</h1>
+        
+    <div id ="search">
+        <input type="text" list="product_search_list" id = "search_product_input" placeholder="Search Items" >
+        <datalist id="product_search_list"></datalist>
+        <button class="add_button">Add</button>
+    </div><br>
+   <!--  <span>
+        <select id="currency"></select>  
+    </span> -->
+    <section class="products"> 
+            <span class ="list_title item">Item</span>
+            <span class ="list_title price ">Price</span> 
+            <ul class = "product_list"></ul>  
+    </section>
+    <div id ="total_price"></div>
+    <script src = "main.js"></script>
+</body>
+</html>
