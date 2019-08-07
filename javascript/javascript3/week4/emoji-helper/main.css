@@ -1,0 +1,182 @@
+/* --------------------------------------------------------
+Style Sheet for Hack Your Future, homework Week4
+author: Fatemeh Pakpour
+----------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+CONTENTS:
+=Header
+=section
+=emoji_list
+=emoji_favorite
+=Media
+------------------------------------------------------------*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+* {
+    box-sizing: border-box;
+} 
+ header{
+  background-color:  #e8d714; 
+  width: 100%;
+  height: 35%; 
+  position: relative;
+
+} 
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    top:61%;
+    left:3%;
+}
+.photo{
+    width:100%;
+    border: 1px solid yellow;
+    /* border-radius: 50%; */
+}
+main{
+    position :relative;
+}
+.search {
+    width: 45%;
+    margin: 30px 17px;
+    padding:0.2em 0.5em; 
+    position:reletive; 
+  }
+  .search span {
+    width: 40px;
+    height: 36px;
+    background: #e6d51c; 
+    position:absolute;
+    top : 3%;
+    left:13em;
+    border: 1px solid white; 
+    border-radius: 50%; 
+    text-align: center;
+    color: rgb(255, 250, 250);
+    font-size: 21px;
+  }
+  .fa-search {
+    padding: 4px;
+  }
+  .input_search{
+      width:301px;
+      border:0.5px solid #e6d51c;
+      padding: 1em;    
+  }
+  
+  .emoji_category{
+    border:0px;
+    outline:0px;
+    border:0.5px solid #e6d51c;
+    padding:1em;
+  }
+  
+.emoji_list , .favorite_emoji{
+    overflow: auto;
+    width:310px;
+    height:200px;
+    float:left;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(8, 24, 77); 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    border-radius: 15px;
+    padding:0;
+    margin-bottom:8%;   
+   padding-top:20px;
+}
+
+.emoji_list ul{
+  padding:  0.5% 2%;
+}
+ul li.emoji{
+  font-size: 1.8em;
+}
+li{
+  text-align: center;
+  font-size: 13px;
+  color:rgb(17, 7, 63);
+}
+ul {
+  list-style: none;
+  width: 100px;
+  height: 100px; 
+  text-align: center;
+}
+li:hover {
+    cursor: pointer;
+  }
+.emoji_box {
+  margin-left: 9%;
+}
+.emoji_box .favorite_emoji {
+  margin-top:70px;
+} 
+.title {
+  background:rgb(14, 24, 56);;
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding:2%;
+  border-radius: 15px; 
+  width:80%;
+}  
+.favorite{
+  position: absolute;
+  top:22.5em;
+} 
+/* Media Query */
+ @media (min-width: 768px) { 
+  header{
+    height: 80%;
+  }
+  .photo{
+    height:90%;
+    border-radius: 0;
+  }     
+  .search {
+    display: flex;
+    margin: 6em 6em; 
+    border: 1px solid rgb(21, 13, 56); 
+    border-radius: 20px;   
+  }
+  .search span {
+    left:8%;
+  }   
+  .input_search{
+    width:40%;
+    border:0px;
+    outline:0px;
+  }
+  input::placeholder {
+    padding: 0 30px;
+  }
+  .emoji_category{
+    border:0px;
+    outline:0px;
+    border:0.5px solid #e6d51c;
+  }
+  .emoji_list , .favorite_emoji{
+    width:1002px;
+    height:500px;   
+    margin-bottom:60px;
+  }
+  .favorite_emoji{
+    height:300px;
+  }
+  .favorite{
+    top:42em;
+  }  
+  header h1{
+    top:81%;
+  }
+ 
+}

@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" />
+    
+  </head>
+  <body>
+    <header>
+    <h1>EMOJIS!</h1>
+    <img class = "photo" src="./assets/emojis.jpg" alt="emojis">
+    </header>
+    <main>
+      <!-- search emoji section -->
+      <section class="search">
+        <span><i class="fa fa-search"></i></span>
+        <input type="text" class="input_search" name="name" placeholder="Enter Emoji's Name"/>
+        <select class="emoji_category">
+          <option>Select Category</option>
+        </select>
+      </section>
+      <!-- list of emojis section -->
+      <section class="emoji_box">
+        <h2 class = "title list">Click on emojis</h2>
+        <ul class="emoji_list"></ul>
+      </section>
+      <!-- list of favorite emojis section -->
+      <section class="emoji_box">
+        <h2 class ="title favorite">Favorite Emojis</h2> 
+        <ul class="favorite_emoji"></ul>
+      </section>
+    </main>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/copy-to-clipboard.js"></script>
+  </body>
+</html>
