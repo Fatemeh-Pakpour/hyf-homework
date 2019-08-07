@@ -112,7 +112,7 @@ function cateagoryOfEmoji(listOfEmoji) {
  */
 function searchEmoji(searchString, listOfEmoji, optionOfSearch) {
   return listOfEmoji.filter(emoji => {
-    return emoji[optionOfSearch].includes(searchString);
+    return emoji[optionOfSearch].includes(searchString.toLocaleLowerCase());
   });
 }
 /**
