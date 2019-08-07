@@ -17,7 +17,6 @@ function emojiFetch() {
   fetch(url)
     .then(response => response.json())
     .then(json => {
-      console.log(json);
       listOfEmoji = json;
       renderEmoji(listOfEmoji, emojiListElem);
       cateagoryOfEmoji(listOfEmoji);
@@ -65,11 +64,16 @@ inputSearch.addEventListener("keyup", () => {
  * @returns
  */
 function filterByCategory() {
-  const listOfEmojisByCategory = searchEmoji(
-    selectCategory.value,
-    listOfEmoji,
-    "category"
-  );
+  let listOfEmojisByCategory;
+  if (selectCategory.value === "Select Category") {
+    listOfEmojisByCategory = listOfEmoji;
+  } else {
+    listOfEmojisByCategory = searchEmoji(
+      selectCategory.value,
+      listOfEmoji,
+      "category"
+    );
+  }
   return listOfEmojisByCategory;
 }
 
@@ -99,7 +103,7 @@ function cateagoryOfEmoji(listOfEmoji) {
   });
 }
 /**
- *search emoji 
+ *search emoji
  *
  * @param {*} searchString
  * @param {*} listOfEmoji

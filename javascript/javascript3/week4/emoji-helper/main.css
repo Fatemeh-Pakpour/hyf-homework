@@ -147,6 +147,7 @@ li:hover {
     margin: 6em 6em; 
     border: 1px solid rgb(21, 13, 56); 
     border-radius: 20px;   
+    width:50%;
   }
   .search span {
     left:8%;
@@ -154,7 +155,9 @@ li:hover {
   .input_search{
     width:40%;
     border:0px;
-    outline:0px;
+    outline:0px; 
+    margin-left:3em;
+  
   }
   input::placeholder {
     padding: 0 30px;
