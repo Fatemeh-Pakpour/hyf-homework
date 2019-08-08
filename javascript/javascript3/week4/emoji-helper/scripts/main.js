@@ -49,15 +49,7 @@ function renderEmoji(listOfEmoji, listElement = emojiListElem) {
     listElement.appendChild(emojiUl);
   });
 }
-inputSearch.addEventListener("keyup", () => {
-  const categorySelcted = searchEmoji(
-    inputSearch.value,
-    filterByCategory(),
-    "name"
-  );
 
-  renderEmoji(categorySelcted);
-});
 /**
  *filter the emojis by category
  *
@@ -92,16 +84,8 @@ function cateagoryOfEmoji(listOfEmoji) {
     optionTag.textContent = category;
     selectCategory.appendChild(optionTag);
   });
-  selectCategory.addEventListener("change", () => {
-    inputSearch.value = "";
-    const selectedEmoji = searchEmoji(
-      selectCategory.value,
-      listOfEmoji,
-      "category"
-    );
-    renderEmoji(selectedEmoji);
-  });
 }
+
 /**
  *search emoji
  *
@@ -112,7 +96,7 @@ function cateagoryOfEmoji(listOfEmoji) {
  */
 function searchEmoji(searchString, listOfEmoji, optionOfSearch) {
   return listOfEmoji.filter(emoji => {
-    return emoji[optionOfSearch].includes(searchString.toLocaleLowerCase());
+    return emoji[optionOfSearch].includes(searchString);
   });
 }
 /**
@@ -132,5 +116,20 @@ function saveEmoji(emoji) {
   localStorage.setItem("favoritEmoji", JSON.stringify(favoritEmoji));
   renderEmoji(favoritEmoji, favoriteEmojiUl);
 }
+
+// events
+
+inputSearch.addEventListener("keyup", () => {
+  const searchByName = searchEmoji(
+    inputSearch.value.toLocaleLowerCase(),
+    filterByCategory(),
+    "name"
+  );
+  renderEmoji(searchByName);
+});
+selectCategory.addEventListener("change", () => {
+  inputSearch.value = "";
+  renderEmoji(filterByCategory());
+});
 
 emojiFetch();
