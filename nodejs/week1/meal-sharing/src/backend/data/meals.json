@@ -8,73 +8,73 @@
 },
 {
     "id" : 2,
-    "title" : "Pasta",
+    "title" : "Turkish dolma",
     "maxNumberOfGuests" : 12,
-    "description" : "You will enjoy some kind of pasta dish",
+    "description" : "You will enjoy some kind of dolma",
     "createdAt" : "2019-08-28",
     "price" : 80.00
 },
 {
     "id" : 3,
-    "title" : "Fried rice",
+    "title" : "Sushi",
     "maxNumberOfGuests" : 15,
-    "description" : "Vietnamese kitchen inspired fried rice dishes",
+    "description" : "Japanese kitchen",
     "createdAt" : "2019-08-25",
     "price" : 110.00
 },
 {
     "id" : 4,
-    "title" : "Mushroom risotto",
+    "title" : "Burger",
     "maxNumberOfGuests" : 12,
-    "description" : "Lovely creamy risotto with mushrooms",
+    "description" : "juicy burger with french fries",
     "createdAt" : "2019-08-25",
     "price" : 112.00
 },
 {
     "id" : 5,
-    "title" : "Panini sandwich",
+    "title" : "Iranian Kebab",
     "maxNumberOfGuests" : 15,
-    "description" : "Have an easy lunch with us",
+    "description" : "Have an amazing lunch with us",
     "createdAt" : "2019-08-25",
-    "price" : 60.00
+    "price" : 7.00
 },
 {
     "id" : 6,
-    "title" : "Penne",
+    "title" : "Mexican food with drink",
     "maxNumberOfGuests" : 6,
-    "description" : "Delicious pasta dish",
+    "description" : "Delicious dish",
     "createdAt" : "2019-08-27",
-    "price" : 80.00
+    "price" : 90.00
 },
 {
     "id" : 7,
-    "title" : "Fruit pies",
+    "title" : "Pot roast",
     "maxNumberOfGuests" : 9,
-    "description" : "We love to bake cakes and pies",
+    "description" : "delicious American pot roast",
     "createdAt" : "2019-08-21",
     "price" : 50.00
 },
 {
     "id" : 8,
-    "title" : "Chocolate cake",
+    "title" : "clam chowder",
     "maxNumberOfGuests" : 6,
-    "description" : "Lovely dessert with lots of chocolate",
+    "description" : "delicious soup",
     "createdAt" : "2019-08-20",
     "price" : 60.00
 },
 {
     "id" : 9,
-    "title" : "Veggie ribs",
+    "title" : "Veggie sandwich",
     "maxNumberOfGuests" : 6,
-    "description" : "The art of making vegan meat",
+    "description" : "The art of making sandwich",
     "createdAt" : "2019-08-12",
     "price" : 132.00
 },
 {
     "id" : 10,
-    "title" : "Vegan chicken soup",
+    "title" : "Chicken soup",
     "maxNumberOfGuests" : 7,
-    "description" : "We are good at making mock meat. Come and try it!",
+    "description" : "We are good at making soup. Come and try it!",
     "createdAt" : "2019-08-16",
     "price" : 150.00
 }

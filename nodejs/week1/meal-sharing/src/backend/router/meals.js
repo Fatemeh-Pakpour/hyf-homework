@@ -12,4 +12,17 @@ router.get("/", function(req, res) {
   res.send(meals);
 });
 
+// Add review to the meals 
+const dataReview= fs.readFileSync(__dirname + "/../data/review.json", "utf8");
+const reviews = JSON.parse(dataReview);
+
+meals.forEach(meal => {
+  meal.review = [];
+  for(let review of reviews){
+    if (meal.id === review.meal_id){
+      meal.review.push(review);
+    }
+  }
+});
+
 module.exports = router;
