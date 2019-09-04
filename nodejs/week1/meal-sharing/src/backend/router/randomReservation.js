@@ -2,18 +2,16 @@ const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 
-// Read and Parse meals.js
+// Read and Parse reservations file
 const dataReservations = fs.readFileSync(__dirname + "/../data/meals.json", "utf8");
 const reservations = JSON.parse(dataReservations);
-// console.log(meals);
 
-const random = reservations[Math.floor(Math.random()*reservations.length)];
 
-// const randomReservation = reservations.filter(reservation => reservation.id === randNum);
+const randomReservation = reservations[Math.floor(Math.random()*reservations.length)];
 
-// get the list of meals from bd
+// get the list of ransom reservation from bd
 router.get("/", function(req, res) {
-  res.send(random);
+  res.send(randomReservation);
 });
 
 module.exports = router;

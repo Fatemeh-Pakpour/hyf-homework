@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 
-// Read and Parse meals.js
+// Read and Parse meals file
 const dataMeal = fs.readFileSync(__dirname + "/../data/meals.json", "utf8");
 const meals = JSON.parse(dataMeal);
-// console.log(meals);
+
 
 function getRandomNumber(min, max) {
     min = Math.ceil(min);
@@ -15,7 +15,7 @@ function getRandomNumber(min, max) {
 const randNum = getRandomNumber(1,10);
 const randomMeal = meals.filter(meal => meal.id === randNum);
 
-// get the list of meals from bd
+// get the list of random meal from bd
 router.get("/", function(req, res) {
   res.send(randomMeal);
 });
