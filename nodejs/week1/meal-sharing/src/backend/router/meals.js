@@ -12,6 +12,8 @@ router.get("/", function(req, res) {
   res.send(meals);
 });
 
+
+
 // Add reviews to the meals 
 const dataReview= fs.readFileSync(__dirname + "/../data/review.json", "utf8");
 const reviews = JSON.parse(dataReview);
