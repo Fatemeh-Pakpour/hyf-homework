@@ -21,11 +21,11 @@ app.use("/reservations", reservations);
 app.use("/reviews", reviews);
 app.use("/reviews", reviewsById);
 
-// app.use((req, res,next)=>{
-//   const err = new Error("oh no!")
-//   err.status = 404;
-//   next(err);
-// })
+app.use((req, res,next)=>{
+  const err = new Error(" 404, oh no!")
+  err.status = 404;
+  next(err);
+})
 
 const server = app.listen(3000, () => {
   console.log("The app is running on localhost:3000!");
