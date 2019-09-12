@@ -18,7 +18,7 @@ let responseMeals =meals;
    }
   
    if(parameters.title){
-    responseMeals = meals.filter(meal =>meal.title === parameters.title);
+    responseMeals = meals.filter(meal =>meal.title.toLowerCase().trim().split(" ").join("") === parameters.title.toLowerCase().trim());
    }
    
    if(parameters.date){
