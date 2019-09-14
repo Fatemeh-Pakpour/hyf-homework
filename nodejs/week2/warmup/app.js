@@ -13,9 +13,9 @@ app.get("/numbers/add", (req, res) => {
   res.send(`${first} + ${second} = ${add}`);
 });
 
-app.get("/numbers/multiply", (req, res) => {
-  const { first } = req.query;
-  const { second } = req.query;
+app.get("/numbers/multiply/:first/:second", (req, res) => {
+  const { first } = req.params;
+  const { second } = req.params;
   const multiply = first * second;
   res.send(`${first} *${second} =${multiply}`);
 });
