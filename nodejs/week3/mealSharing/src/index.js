@@ -4,8 +4,8 @@ const router = express.Router();
 
 // Routers
 const mealsRouter = require('./api/meals');
-const reservationsRouter = require('./api/reservations.js');
-const reviewsRouter = require('./api/reviews.js');
+const reservationsRouter = require('./api/reservations');
+const reviewsRouter = require('./api/reviews');
 
 
 const port = process.env.PORT || 5000;
@@ -17,7 +17,7 @@ app.use(express.json());
 
 // If path= meals, use mealsRouter
 router.use('/meals', mealsRouter);
- router.use('/reservations', reservationsRouter);
+router.use('/reservations', reservationsRouter);
 router.use('/reviews', reviewsRouter);
 
 

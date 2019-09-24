@@ -3,15 +3,21 @@
 var mysql = require("mysql");
 
 require("dotenv").config();
-
-var pool = mysql.createPool({
-//   connectionLimit: 10,
-  host: 'localhost',
-  user: 'root',
-  password: 'fat?/1568?/pak',
-  database: 'mealSharing',
-//   port: 'db_port # on development: 3306',
-//   multipleStatements: true
+const {
+  USER: user,
+  PASSWORD: password,
+  HOST: host,
+  DATABASE: database,
+  PORT: port
+ } = process.env;
+//  console.log(process.env);
+const pool = mysql.createPool({
+  connectionLimit: 10,
+  host,
+  user,
+  password,
+  database,
+  multipleStatements: true
 });
 
 pool.getConnection((err, connection) => {

@@ -2,17 +2,23 @@ const express = require("express");
 // const app = express();
 const router = express.Router();
 const pool = require("../database");
-const bodyParser = require ('body-parser');
+const bodyParser = require('body-parser');
 
-router.use (bodyParser.urlencoded ({extended: false}));
-router.use (bodyParser.json ());
+
+// router.use (bodyParser.urlencoded ({extended: false}));
+router.use(bodyParser.json());
 
 router.get("/", (request, response) => {
-  pool.query("some sql query", function(error, results, fields) {
-    response.json({});
+  pool.query("select * from Meal", (error, results, fields) =>{
+    if (error) {
+      console.error ('this is the error', error);
+    } else {
+    response.send(results);
+    }
+    //  response.send("Hollo");
     
   });
-});
+ });
 
 // post a new meal
 router.post ('/add-meal', (req, res) => {
@@ -29,17 +35,21 @@ router.post ('/add-meal', (req, res) => {
   // get a meal by id
   router.get ('/:id', (req, res) => {
     const mealId = req.params.id;
+    console.log("beginning query");
     pool.query (
-      'select * from Meal where id = ?;',
+      'select * from Meal where id = ?',
       mealId,
       (err, result, query) => {
         if (err) {
           console.error (err);
         } else {
+          console.log("resulting");
           res.send (result);
+          console.log(result);
         }
       }
     );
+    console.log("ending query");
   });
   
   // update meal by id
