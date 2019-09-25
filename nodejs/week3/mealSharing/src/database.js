@@ -9,7 +9,7 @@ const {
   HOST: host,
   DATABASE: database,
   PORT: port
- } = process.env;
+} = process.env;
 //  console.log(process.env);
 const pool = mysql.createPool({
   connectionLimit: 10,
