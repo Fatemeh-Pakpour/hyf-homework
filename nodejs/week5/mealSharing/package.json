@@ -1,5 +1,5 @@
 {
-  "name": "new-project",
+  "name": "mealSharing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,10 +7,12 @@
     "build": "rm -rf dist && webpack --mode development --config webpack.server.config.js && webpack --mode development",
     "start": "node ./dist/server.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-sass": "^4.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
