@@ -1,7 +1,112 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
+
 * {
   font-family: 'Montserrat', sans-serif;
 }
-body{
-    background-color: black;
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+#featured-meal-container{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row ;
+    margin-right: -15px;
+    margin-left: -15px;
 }
+
+.featured-meal{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* display: block; */
+}
+.featured-meal-sub-container{
+    margin-bottom: 1rem!important;
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.image {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+.featured-meal-content{
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    display: block;
+    list-style-type: none;
+}
+#meals-container , #reviews-container{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row ;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* start star rating  */
+.stars-inner li,
+.stars-outer {
+  padding: 10px;
+}
+
+.stars-outer {
+  position: relative;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+.stars-outer::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: rgb(233, 220, 220);
+}
+.stars-inner::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: rgb(206, 228, 15);
+}
+
+/* End start rating */
+
+@media (min-width: 992px){
+.large-size {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    /* max-width: 33.333333%; */
+}
+}
+@media (min-width: 768px){
+    .medium-size{
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
