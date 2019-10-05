@@ -1,4 +1,4 @@
-function mealsId(req, router) {
+function meals(req, router) {
   console.log("hello");
   document.body.innerHTML = `
   
@@ -12,7 +12,6 @@ function mealsId(req, router) {
             <div class="navbar-nav ml-4">
               <a class="nav-item nav-link" href="http://localhost:3000">HOME <span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link" href="http://localhost:3000/meals">MEALS</a>
-              <a class="nav-item nav-link" href="http://localhost:3000/reservations">RESERVATIONS</a>
               <a class="nav-item nav-link" href="http://localhost:3000/reviews">REVIEW</a>
             </div>
         </div>
@@ -29,7 +28,7 @@ function mealsId(req, router) {
 }
 
 function fetchAllMeals() {
-  const url = `http://localhost:3000/api/meals`;
+  const url = "/api/meals";
   fetch(url)
     .then(response => response.json())
     .then(meal => renderAllMeals(meal));
@@ -65,4 +64,4 @@ function renderAllMeals(data) {
 fetchAllMeals();
 
 
-export default mealsId;
+export default meals;

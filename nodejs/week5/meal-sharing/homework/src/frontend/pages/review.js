@@ -11,7 +11,6 @@ function reviewRouter(req, router) {
                 <div class="navbar-nav ml-4">
                     <a class="nav-item nav-link" href="http://localhost:3000">HOME <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="http://localhost:3000/meals">MEALS</a>
-                    <a class="nav-item nav-link" href="http://localhost:3000/reservations">RESERVATIONS</a>
                     <a class="nav-item nav-link" href="http://localhost:3000/reviews">REVIEW</a>
                 </div>
             </div>
@@ -36,7 +35,7 @@ function reviewRouter(req, router) {
   
   
   function fetchAllReviews() {
-    const url = `http://localhost:3000/api/reviews`;
+    const url = `/api/reviews`;
     fetch(url)
       .then(response => response.json())
       .then(review => renderAllReviews(review));
